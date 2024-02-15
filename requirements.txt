@@ -1,0 +1,4 @@
+reportlab
+PyMuPDF
+mysql-connector-python
+pytoml
