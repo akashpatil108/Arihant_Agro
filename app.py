@@ -14,10 +14,10 @@ import pandas as pd
 import pytoml
 
 # Access secrets directly through st.secrets
-DB_HOST = st.secrets["Arihant_agro"]["host"]
-DB_USER = st.secrets["Arihant_agro"]["user"]
-DB_PASSWORD = st.secrets["Arihant_agro"]["password"]
-DB_NAME = st.secrets["Arihant_agro"]["name"]
+DB_HOST = st.secrets["host"]
+DB_USER = st.secrets["user"]
+DB_PASSWORD = st.secrets["password"]
+DB_NAME = st.secrets["name"]
 
 # Connect to MySQL database
 connection = mysql.connector.connect(
