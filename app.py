@@ -13,15 +13,12 @@ from datetime import datetime
 import pandas as pd
 import pytoml
 
-# Load configuration from config.toml file
-with open('config.toml', 'r') as file:
-    config = pytoml.load(file)
+# Access secrets directly through st.secrets
+DB_HOST = st.secrets["Arihant_agro"]["host"]
+DB_USER = st.secrets["Arihant_agro"]["user"]
+DB_PASSWORD = st.secrets["Arihant_agro"]["password"]
+DB_NAME = st.secrets["Arihant_agro"]["name"]
 
-# Access database credentials
-DB_HOST = config['Arihant_agro']['host']
-DB_USER = config['Arihant_agro']['user']
-DB_PASSWORD = config['Arihant_agro']['password']
-DB_NAME = config['Arihant_agro']['name']
 # Connect to MySQL database
 connection = mysql.connector.connect(
     host=DB_HOST,
