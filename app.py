@@ -12,12 +12,12 @@ import mysql.connector
 from datetime import datetime
 import pandas as pd
 import pytoml
-
+toml_data = toml.load("secrets.toml")
 # Access secrets directly through st.secrets
-DB_HOST = st.secrets["host"]
-DB_USER = st.secrets["user"]
-DB_PASSWORD = st.secrets["password"]
-DB_NAME = st.secrets["name"]
+DB_HOST = toml_data["Arihant_agro"]["host"]
+DB_USER = toml_data["Arihant_agro"]["user"]
+DB_PASSWORD = toml_data["Arihant_agro"]["password"]
+DB_NAME = toml_data["Arihant_agro"]["name"]
 
 # Connect to MySQL database
 connection = mysql.connector.connect(
