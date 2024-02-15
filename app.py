@@ -14,7 +14,7 @@ import pandas as pd
 import pytoml
 
 # Load configuration from config.toml file
-with open('j:\\data science\\VS code\\arihant agro\\config.toml', 'r') as file:
+with open('config.toml', 'r') as file:
     config = pytoml.load(file)
 
 # Access database credentials
