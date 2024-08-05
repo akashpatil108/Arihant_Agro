@@ -14,15 +14,16 @@ import pandas as pd
 import pytoml
 import hashlib
 
-# Load configuration from config.toml file
-with open('j:\\data science\\VS code\\arihant agro\\config.toml', 'r') as file:
-    config = pytoml.load(file)
+# # Load configuration from config.toml file
+# with open('j:\\data science\\VS code\\arihant agro\\config.toml', 'r') as file:
+#     config = pytoml.load(file)
 
-# Access database credentials
-DB_HOST = config['Arihant_agro']['host']
-DB_USER = config['Arihant_agro']['user']
-DB_PASSWORD = config['Arihant_agro']['password']
-DB_NAME = config['Arihant_agro']['name']
+# # Access database credentials
+# DB_HOST = config['Arihant_agro']['host']
+# DB_USER = config['Arihant_agro']['user']
+# DB_PASSWORD = config['Arihant_agro']['password']
+# DB_NAME = config['Arihant_agro']['name']
+
 
 # Connect to MySQL database
 connection = mysql.connector.connect(
