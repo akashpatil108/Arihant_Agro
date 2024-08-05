@@ -23,7 +23,16 @@ import hashlib
 # DB_USER = config['Arihant_agro']['user']
 # DB_PASSWORD = config['Arihant_agro']['password']
 # DB_NAME = config['Arihant_agro']['name']
+import streamlit as st
 
+# Load secrets
+secrets = st.secrets["Arihant_agro"]
+
+# Access database credentials
+DB_HOST = secrets["host"]
+DB_USER = secrets["user"]
+DB_PASSWORD = secrets["password"]
+DB_NAME = secrets["name"]
 
 # Connect to MySQL database
 connection = mysql.connector.connect(
